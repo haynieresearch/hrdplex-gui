@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CardReaderPropertiesClass</class>
+ <widget class="QWidget" name="CardReaderPropertiesClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>474</width>
+    <height>572</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CardReaderProperties</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>40</y>
+     <width>441</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Terminal</string>
+   </property>
+   <widget class="QComboBox" name="deviceCombo">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>20</y>
+      <width>81</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>1442</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2501</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3505</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Device Number</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="deviceNumber">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>20</y>
+      <width>61</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>226</x>
+      <y>20</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Device Type</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>130</y>
+     <width>441</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Optional Arguments</string>
+   </property>
+   <widget class="QCheckBox" name="sockdevCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>211</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Card Reader Is Socket Device</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>70</y>
+      <width>191</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fila Names (drag to re-arrange)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>61</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deleteButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>61</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="OKButton">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>390</y>
+      <width>80</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OK</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cancelButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>390</y>
+      <width>80</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sockdev">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>90</y>
+      <width>271</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sockspecLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>131</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Socket Specification</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="eofGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>270</y>
+      <width>120</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>EOF handling</string>
+    </property>
+    <widget class="QRadioButton" name="eofRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>94</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>eof</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="intrqRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>94</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>intrq</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="eofNoneRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>269</y>
+      <width>211</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Character Set</string>
+    </property>
+    <widget class="QRadioButton" name="ebcdicRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>94</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ebcdic</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="asciiRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>94</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ascii</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="truncCheckBox">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>50</y>
+       <width>101</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>specifies, for ASCII files, that lines longer than 80 characters 
+are truncated instead of producing a unit check error.</string>
+     </property>
+     <property name="text">
+      <string>Truncate</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="autopadCheckBox">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>20</y>
+       <width>101</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>specifies, for EBCDIC files, that the file is automatically padded 
+to a multiple of 80 bytes if necessary. </string>
+     </property>
+     <property name="text">
+      <string>Autopad</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="autoDetectRadioButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Auto Detect</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QCheckBox" name="multifileCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>111</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>specifies, when multiple input files are entered, to automatically open the next input file
+and continue reading whenever EOF is encountered on a given file. If not specified, then
+reading stops once EOF is reached on a given file and an attention interrupt is then
+required to open and begin reading the next file.</string>
+    </property>
+    <property name="text">
+     <string>Multifile</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

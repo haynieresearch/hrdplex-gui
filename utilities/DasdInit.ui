@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dasdinitClass</class>
+ <widget class="QWidget" name="dasdinitClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>556</width>
+    <height>585</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dasdinit</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>521</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Output Specification</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Filename</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="filename">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>20</y>
+      <width>381</width>
+      <height>26</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Path</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="path">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>60</y>
+      <width>381</width>
+      <height>26</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="browseButton">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>60</y>
+      <width>22</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>521</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Options</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <widget class="QComboBox" name="compressionComboBox">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>20</y>
+      <width>75</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>zlib</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>bz2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>expanding</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Compression</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="lfsCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Build One Large File</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="altCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>241</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Include Alternate Cylinders</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="rawCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>231</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Raw Dasd Image File</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="linuxCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>251</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Linux Formatted Dasd (cdl)</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>380</y>
+     <width>521</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Device Specifications</string>
+   </property>
+   <widget class="QComboBox" name="deviceTypeComboBox">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>25</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maxVisibleItems">
+     <number>20</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>2305</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2305-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2305-2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2311</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2311-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2314</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2314-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3330</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3330-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3330-2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3330-11</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3340</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3340-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3340-35</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3340-2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3340-70</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3350</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3350-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3375</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3375-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3380</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3380-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3380-A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3380-B</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3380-D</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3380-J</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3380-2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3380-E</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3380-3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3380-K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>EMC3380K+</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>EMC3380K++</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3390</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3390-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3390-2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3390-3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3390-9</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3390-27</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3390-J</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3390-54</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3390-JJ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9345</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9345-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9345-2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3310</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3310-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3370</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3370-1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3370-A1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3370-B1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3370-2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3370-A2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3370-B2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9332</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9332-400</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9332-600</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9335</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9313</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9336</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9336-10</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9336-20</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9336-25</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0671</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0671-04</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0671-08</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Device Type</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="volser">
+    <property name="geometry">
+     <rect>
+      <x>172</x>
+      <y>70</y>
+      <width>101</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>6</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Volume Serial Number</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="sizeCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>30</y>
+      <width>151</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Irregular size</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="sizeSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>70</y>
+      <width>121</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>1000000</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="runButton">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>530</y>
+     <width>80</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Run</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exitButton">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>530</y>
+     <width>80</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="progressBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>521</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="textVisible">
+    <bool>true</bool>
+   </property>
+   <property name="invertedAppearance">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

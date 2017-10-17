@@ -1,0 +1,11 @@
+1. Enter the toplevel directory hrdplex:
+	$ cd hrdplex
+
+2. Run Qt's makefile generation command:
+	$ qmake
+
+3. Start the build:
+	$ make
+
+4. Install hrdplex-gui (as root):
+	$ make install

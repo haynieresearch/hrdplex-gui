@@ -1,0 +1,19 @@
+<ui version="4.0" >
+ <class>DevicesClass</class>
+ <widget class="QWidget" name="DevicesClass" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>212</width>
+    <height>553</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Devices</string>
+  </property>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>HRDPLEX</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="gui.qrc">
+    <normaloff>:/icons/tray.ico</normaloff>:/icons/tray.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen_configuration"/>
+    <addaction name="actionEditConfig"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_As"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionViewControls"/>
+    <addaction name="actionViewDevices"/>
+    <addaction name="actionViewCommand"/>
+    <addaction name="separator"/>
+    <addaction name="actionView_32_bit_General_Registers"/>
+    <addaction name="actionView_32_bit_Control_Registers"/>
+    <addaction name="actionView_32_bit_Floating_Point_Registers"/>
+    <addaction name="actionView_32_bit_Access_Registers"/>
+    <addaction name="actionView_64_bit_General_Registers"/>
+    <addaction name="actionView_64_bit_Control_Registers"/>
+    <addaction name="actionView_64_bit_Floating_Point_Registers"/>
+    <addaction name="actionView_PSW"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopy"/>
+    <addaction name="separator"/>
+    <addaction name="actionDelete_messages"/>
+    <addaction name="actionSave_messages"/>
+    <addaction name="separator"/>
+    <addaction name="actionPreferences"/>
+   </widget>
+   <widget class="QMenu" name="menuCommand">
+    <property name="title">
+     <string>Command</string>
+    </property>
+    <addaction name="actionPower_on"/>
+    <addaction name="actionPower_off"/>
+    <addaction name="actionIPL_Load"/>
+    <addaction name="separator"/>
+    <addaction name="actionStart"/>
+    <addaction name="actionStop"/>
+    <addaction name="separator"/>
+    <addaction name="actionExtInterrupt"/>
+    <addaction name="actionStore_status"/>
+    <addaction name="actionPSW_Restart"/>
+   </widget>
+   <widget class="QMenu" name="menuUtilities">
+    <property name="title">
+     <string>Utilities</string>
+    </property>
+    <addaction name="actionDasdinit"/>
+    <addaction name="actionDasdconv"/>
+    <addaction name="actionDasdcopy"/>
+    <addaction name="actionDasdload"/>
+    <addaction name="actionDasdisup"/>
+    <addaction name="actionDasdls"/>
+    <addaction name="actionDasdcat"/>
+    <addaction name="separator"/>
+    <addaction name="actionTapemap"/>
+    <addaction name="actionTapesplit"/>
+    <addaction name="actionTapecopy"/>
+    <addaction name="separator"/>
+    <addaction name="actionHetinit"/>
+    <addaction name="actionHetmap"/>
+    <addaction name="actionHetupd"/>
+    <addaction name="actionHetget"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuPrinters">
+    <property name="title">
+     <string>Printers</string>
+    </property>
+    <addaction name="actionStartPrinter"/>
+    <addaction name="separator"/>
+    <addaction name="actionStationery"/>
+    <addaction name="actionDecolation"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuCommand"/>
+   <addaction name="menuUtilities"/>
+   <addaction name="menuPrinters"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_configuration">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconOpen.png</normaloff>:/icons/16x16/iconOpen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open configuration...</string>
+   </property>
+  </action>
+  <action name="actionEditConfig">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconEdit.png</normaloff>:/icons/16x16/iconEdit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit configuration...</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconExit.png</normaloff>:/icons/16x16/iconExit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionViewControls">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconControl.png</normaloff>:/icons/16x16/iconControl.png</iconset>
+   </property>
+   <property name="text">
+    <string>View Controls</string>
+   </property>
+  </action>
+  <action name="actionViewDevices">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/yellowhigh.png</normaloff>:/icons/yellowhigh.png</iconset>
+   </property>
+   <property name="text">
+    <string>View Devices</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconPreferences.png</normaloff>:/icons/16x16/iconPreferences.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preferences...</string>
+   </property>
+  </action>
+  <action name="actionDelete_messages">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconDeleteMessages.png</normaloff>:/icons/16x16/iconDeleteMessages.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete messages</string>
+   </property>
+  </action>
+  <action name="actionSave_messages">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconSave.png</normaloff>:/icons/16x16/iconSave.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save messages</string>
+   </property>
+  </action>
+  <action name="actionPower_on">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconPoweron.png</normaloff>:/icons/16x16/iconPoweron.png</iconset>
+   </property>
+   <property name="text">
+    <string>Power on</string>
+   </property>
+  </action>
+  <action name="actionPower_off">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconPoweroff.png</normaloff>:/icons/16x16/iconPoweroff.png</iconset>
+   </property>
+   <property name="text">
+    <string>Power off</string>
+   </property>
+  </action>
+  <action name="actionIPL_Load">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconIpl.png</normaloff>:/icons/16x16/iconIpl.png</iconset>
+   </property>
+   <property name="text">
+    <string>IPL</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconStart.png</normaloff>:/icons/16x16/iconStart.png</iconset>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconStop.png</normaloff>:/icons/16x16/iconStop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionExtInterrupt">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconInterrupt.png</normaloff>:/icons/16x16/iconInterrupt.png</iconset>
+   </property>
+   <property name="text">
+    <string>Interrupt</string>
+   </property>
+  </action>
+  <action name="actionStore_status">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconStoreStatus.png</normaloff>:/icons/16x16/iconStoreStatus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Store status</string>
+   </property>
+  </action>
+  <action name="actionPSW_Restart">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconPswRestart.png</normaloff>:/icons/16x16/iconPswRestart.png</iconset>
+   </property>
+   <property name="text">
+    <string>PSW Restart</string>
+   </property>
+  </action>
+  <action name="actionDevice_Interrupt">
+   <property name="text">
+    <string>Device Interrupt</string>
+   </property>
+  </action>
+  <action name="actionDisplay_Alter_storage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Display/Alter storage</string>
+   </property>
+  </action>
+  <action name="actionLoad_Reader">
+   <property name="text">
+    <string>Load reader</string>
+   </property>
+  </action>
+  <action name="actionLoad_Tape">
+   <property name="text">
+    <string>Load tape</string>
+   </property>
+  </action>
+  <action name="actionUnload_tape">
+   <property name="text">
+    <string>Unload tape</string>
+   </property>
+  </action>
+  <action name="actionDasdinit">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/dasdinit.png</normaloff>:/icons/16x16/dasdinit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dasdinit...</string>
+   </property>
+   <property name="toolTip">
+    <string>Dasdinit</string>
+   </property>
+  </action>
+  <action name="actionDasdconv">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/dasdconv.png</normaloff>:/icons/16x16/dasdconv.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dasdconv...</string>
+   </property>
+  </action>
+  <action name="actionDasdcopy">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/dasdcopy.png</normaloff>:/icons/16x16/dasdcopy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dasdcopy...</string>
+   </property>
+  </action>
+  <action name="actionDasdload">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/dasdload.png</normaloff>:/icons/16x16/dasdload.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dasdload...</string>
+   </property>
+  </action>
+  <action name="actionDasdisup">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/dasdisup.png</normaloff>:/icons/16x16/dasdisup.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dasdisup...</string>
+   </property>
+  </action>
+  <action name="actionDasdls">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/dasdls.png</normaloff>:/icons/16x16/dasdls.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dasdls...</string>
+   </property>
+  </action>
+  <action name="actionDasdcat">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/dasdcat.png</normaloff>:/icons/16x16/dasdcat.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dasdcat...</string>
+   </property>
+  </action>
+  <action name="actionDasdpdsu">
+   <property name="text">
+    <string>Dasdpdsu...</string>
+   </property>
+  </action>
+  <action name="actionDmap2hrc">
+   <property name="text">
+    <string>Dmap2hrc...</string>
+   </property>
+  </action>
+  <action name="actionCckdcdsk">
+   <property name="text">
+    <string>Cckdcdsk...</string>
+   </property>
+  </action>
+  <action name="actionCckdcomp">
+   <property name="text">
+    <string>Cckdcomp...</string>
+   </property>
+  </action>
+  <action name="actionCckdswap">
+   <property name="text">
+    <string>Cckdswap...</string>
+   </property>
+  </action>
+  <action name="actionTapemap">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/tape.jpg</normaloff>:/icons/tape.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Tapemap...</string>
+   </property>
+  </action>
+  <action name="actionTapesplit">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/tape.jpg</normaloff>:/icons/tape.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Tapesplit...</string>
+   </property>
+  </action>
+  <action name="actionTapecopy">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/tape.jpg</normaloff>:/icons/tape.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Tapecopy...</string>
+   </property>
+  </action>
+  <action name="actionHetinit">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/het.gif</normaloff>:/icons/het.gif</iconset>
+   </property>
+   <property name="text">
+    <string>Hetinit...</string>
+   </property>
+  </action>
+  <action name="actionHetmap">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/het.gif</normaloff>:/icons/het.gif</iconset>
+   </property>
+   <property name="text">
+    <string>Hetmap...</string>
+   </property>
+  </action>
+  <action name="actionHetupd">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/het.gif</normaloff>:/icons/het.gif</iconset>
+   </property>
+   <property name="text">
+    <string>Hetupd...</string>
+   </property>
+  </action>
+  <action name="actionHetget">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/het.gif</normaloff>:/icons/het.gif</iconset>
+   </property>
+   <property name="text">
+    <string>Hetget...</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconHelpAbout.png</normaloff>:/icons/16x16/iconHelpAbout.png</iconset>
+   </property>
+   <property name="text">
+    <string>About...</string>
+   </property>
+  </action>
+  <action name="actionViewCommand">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconCommandLine.png</normaloff>:/icons/16x16/iconCommandLine.png</iconset>
+   </property>
+   <property name="text">
+    <string>View Command Line</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconNew.png</normaloff>:/icons/16x16/iconNew.png</iconset>
+   </property>
+   <property name="text">
+    <string>New...</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconSave.png</normaloff>:/icons/16x16/iconSave.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="icon">
+    <iconset resource="gui.qrc">
+     <normaloff>:/icons/16x16/iconsave-as.png</normaloff>:/icons/16x16/iconsave-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As...</string>
+   </property>
+  </action>
+  <action name="actionView_32_bit_Control_Registers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>32-bit Control Registers</string>
+   </property>
+  </action>
+  <action name="actionView_32_bit_General_Registers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>32-bit General Registers</string>
+   </property>
+  </action>
+  <action name="actionView_32_bit_Floating_Point_Registers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>32-bit Floating-Point Registers</string>
+   </property>
+  </action>
+  <action name="actionView_64_bit_General_Registers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>64-bit General Registers</string>
+   </property>
+  </action>
+  <action name="actionView_64_bit_Control_Registers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>64-bit Control Registers</string>
+   </property>
+  </action>
+  <action name="actionView_64_bit_Floating_Point_Registers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>64-bit Floating-Point Registers</string>
+   </property>
+  </action>
+  <action name="actionView_32_bit_Access_Registers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>32-bit Access Registers</string>
+   </property>
+  </action>
+  <action name="actionView_PSW">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>View PSW</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPrintersManager">
+   <property name="text">
+    <string>Printers Manager...</string>
+   </property>
+  </action>
+  <action name="actionStationery">
+   <property name="text">
+    <string>Stationery ...</string>
+   </property>
+   <property name="iconText">
+    <string>Stationery</string>
+   </property>
+   <property name="toolTip">
+    <string>Stationery</string>
+   </property>
+  </action>
+  <action name="actionDecolation">
+   <property name="text">
+    <string>Decolations ...</string>
+   </property>
+  </action>
+  <action name="actionStationeryManager">
+   <property name="text">
+    <string>Stationery Manager</string>
+   </property>
+  </action>
+  <action name="actionPrinters_Manager">
+   <property name="text">
+    <string>Printers Manager...</string>
+   </property>
+  </action>
+  <action name="action111">
+   <property name="text">
+    <string>111</string>
+   </property>
+  </action>
+  <action name="actionQwe">
+   <property name="text">
+    <string>qwe</string>
+   </property>
+  </action>
+  <action name="actionStartPrinter">
+   <property name="text">
+    <string>Start Printer</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="gui.qrc"/>
+ </resources>
+ <connections/>
+</ui>

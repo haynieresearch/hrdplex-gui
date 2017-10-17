@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TapePropertiesClass</class>
+ <widget class="QWidget" name="TapePropertiesClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>506</width>
+    <height>526</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TapeProperties</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>60</y>
+     <width>431</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Tape</string>
+   </property>
+   <widget class="QComboBox" name="tapeCombo">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>20</y>
+      <width>81</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>3410</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3420</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3422</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3430</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3480</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3490</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3590</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9347</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8809</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Device Number</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="deviceNumber">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>20</y>
+      <width>61</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>226</x>
+      <y>20</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Device Type</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="tapeGroupBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>140</y>
+     <width>431</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Properties</string>
+   </property>
+   <widget class="QLineEdit" name="filename">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>351</width>
+      <height>29</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fileButton">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>70</y>
+      <width>41</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="filenameLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>57</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>File Name</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="awsCheckbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Causes HET files to be written in AWSTAPE format. 
+This basically, disables the additional features provided by the HET format. </string>
+    </property>
+    <property name="text">
+     <string>AWSTAPE</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="compressionCombobox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>131</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Compression (IDRC) : compression method to use</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>No Compression</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ZLib</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BZip2</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QSlider" name="compressionLevelSlider">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>150</y>
+      <width>241</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>9</number>
+    </property>
+    <property name="value">
+     <number>5</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBelow</enum>
+    </property>
+    <property name="tickInterval">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_slider_1">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>170</y>
+      <width>16</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_slider_9">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>170</y>
+      <width>16</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="chunkSizeSpinbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>111</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Liberation Sans'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The &lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;CHUNKSIZE&lt;/span&gt; option allows you to create HET files that contain different chunk sizes. The AWSTAPE (and therefore the HET) format allows each tape block to be logically broken up into smaller chunks. For instance, if your S/3x0 application creates tapes with a block size of 27998, those blocks would be broken down into &lt;span style=&quot; font-family:'Courier New,courier'; font-style:italic;&quot;&gt;nnnnn&lt;/span&gt;  sized chunks. The range is from &lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;4096&lt;/span&gt; to &lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;65535&lt;/span&gt;, the latter being the default. Decreasing the value from its default may reduce compression performance. For compatibility with AWSTAPE files created by the P/390, specify &lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;AWSTAPE&lt;/span&gt; with &lt;span style=&quot; font-family:'Courier New,courier';&quot;&gt;CHUNKSIZE=4096&lt;/span&gt;. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="minimum">
+     <number>4096</number>
+    </property>
+    <property name="maximum">
+     <number>65535</number>
+    </property>
+    <property name="value">
+     <number>65535</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="chunkSizeLabel">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>200</y>
+      <width>91</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Chunk Size</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="noergCheckbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>191</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Liberation Sans'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This option is intended to prevent issuance of the Erase Gap command to those SCSI tape drives which do not support it (such as the Quantum DLT series). It causes Hercules's device emulation logic to ignore any Erase Gap commands issued to the drive and to return immediate 'success' instead. &lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This option should only be used (specified) for drives such as the Quantum, which support switching from read mode to write mode in the middle of a data stream without the need of an intervening Erase Gap command. Specifying it for any other model SCSI drive may cause incorrect functioning as a result of the Erase Gap command not being issued to the actual SCSI hardware. &lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Check the manufacturer information for your particular model of SCSI-attached tape drive (and/or use Fish's &quot;&lt;a href=&quot;http://www.softdevlabs.com/Hercules&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;ftape&lt;/span&gt;&lt;/a&gt;&quot; Windows utility) to determine whether or not this option is needed for your particular drive. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Ignore Erase-Gap commands</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxsizeLabel">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>240</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Maximum file size</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="maxsizeNumSpinbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>61</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Specifies the maximum size (in bytes, Kilobytes or Megabytes) 
+that the emulated file is allowed to grow to. Specifying zero for this parameter means &quot;unlimited&quot;</string>
+    </property>
+    <property name="maximum">
+     <number>1023</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="maxsizeUnitsSpinbox">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>230</y>
+      <width>75</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Bytes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kilobytes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Megabytes</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="eotmarginLabel">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>280</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>End-of-tape margin (kilobytes)</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="eotmarginSpinbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>61</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Liberation Sans'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Specifies the number of bytes remaining before reaching &lt;span style=&quot; font-style:italic;&quot;&gt;maxsize&lt;/span&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;at which point the tape device will signal the presence of the &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&quot;End of Tape&quot; marker (reflector), thus allowing the program &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;to switch to the next tape. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="maximum">
+     <number>999</number>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="readonlycheckbox">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>110</y>
+      <width>80</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Specifies whether the tape is mounted read-only (without a write ring 
+or with the cartridge protect switch set to &quot;write protect&quot;)</string>
+    </property>
+    <property name="text">
+     <string>Readonly</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="deonirqCheckbox">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>110</y>
+      <width>131</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Specifies whether a device end is presented if intervention is required during tape motion</string>
+    </property>
+    <property name="text">
+     <string>Device-end on IRQ</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="blkid32Checkbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>161</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Liberation Sans'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This option indicates that your SCSI-attached tape drive only supports 32-bit block-ids (as used by 3590 drives) and not the 22-bit format used by 3480/3490 drives. You should only specify this option if you intend to define the drive as a model 3480 or 3490 device, and then only if your actual SCSI drive uses 32-bit block-ids of course. If you define your Hercules tape drive as a model 3590 device however, then this option is of course not needed since model 3590 drives are already presumed to use 32-bit block-ids. &lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Specifying this option on a 3480/3490 device statement will cause Hercules device emulation logic to automatically translate the actual SCSI tape drive's 32-bit block-id into 22-bit format before returning it back to the guest operating system (since that is the format it expects it to be in for a model 3480/3490 drive), and to translate the guest's 22-bit format block-id into 32-bit format before sending it to the actual SCSI hardware (since that is the format that the actual hardware requires it to be in). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>32-bit Blockids Only</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="noAutomountCheckbox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>291</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Do not allow guest initiated mounts</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="okButton">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>480</y>
+     <width>80</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Update</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>480</y>
+     <width>80</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
