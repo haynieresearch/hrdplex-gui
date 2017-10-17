@@ -4,5 +4,5 @@ moc/
 obj/
 release/
 ui/
-hrdplex
+hrdplex-gui
 Makefile*
