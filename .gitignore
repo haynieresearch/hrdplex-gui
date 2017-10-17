@@ -7,3 +7,4 @@ ui/
 hrdplex-gui
 Makefile*
 .qmake.stash
+hrdplex-gui.app
