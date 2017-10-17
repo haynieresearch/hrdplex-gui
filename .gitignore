@@ -1,0 +1,8 @@
+hrdplex.pro.user*
+build*
+moc/
+obj/
+release/
+ui/
+hrdplex
+Makefile*
