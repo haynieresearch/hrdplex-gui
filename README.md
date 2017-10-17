@@ -15,3 +15,10 @@ $ make
 ```
 $ sudo make install
 ```
+
+### Assumptions
+This software makes a couple of assumptions, I will list them below and you can either update/install
+what is needed on your system or make the required changes. 
+
+1. C++ compiler (Ubuntu: sudo apt-get install build-essential)
+2. Qt development framework from a release above 5.5.1.
