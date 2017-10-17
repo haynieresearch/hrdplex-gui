@@ -1,4 +1,4 @@
-# HRDPLEX-GUI
+# HRDPLEX-GUI [![Build Status](https://api.travis-ci.org/Haynie-Research-and-Development/hrdplex-gui.svg?branch=master)](https://travis-ci.org/Haynie-Research-and-Development/hrdplex-gui)
 HRDPLEX-GUI is a Graphical User Interface (GUI) to the Hercules Mainframe Emulator. To use this application, you must have the Hercules Emulator installed with GUI support. As of Version 4, this should be enabled by default.
 
 
