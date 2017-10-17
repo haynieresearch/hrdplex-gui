@@ -6,3 +6,4 @@ release/
 ui/
 hrdplex-gui
 Makefile*
+.qmake.stash
