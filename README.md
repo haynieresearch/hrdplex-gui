@@ -1,7 +1,6 @@
 # HRDPLEX-GUI [![Build Status](https://api.travis-ci.org/Haynie-Research-and-Development/hrdplex-gui.svg?branch=master)](https://travis-ci.org/Haynie-Research-and-Development/hrdplex-gui)
 HRDPLEX-GUI is a Graphical User Interface (GUI) to the Hercules (https://github.com/hercules-390/hyperion) Mainframe Emulator. To use this application, you must have the Hercules Emulator installed with GUI support. As of Version 4, this should be enabled by default.
 
-
 ### Setup
 1. Run Qt's makefile generation command at the root folder
 ```
@@ -23,7 +22,7 @@ $ sudo make install
    2. Jay Moseley's documetation also very useful: http://www.jaymoseley.com/hercules
    
 ### My Setup
-I am currently running Hercules & MVS on two seperate machines. One acts as a DASD Controller, the second as the actual system. This creates a somewhat loose SYSPLEX, but it's kind of a stretch to call it even that. Both machines are directly wired to each other over a gigabit connection. The only traffic over this connection is the DASD packets.
+I am currently running Hercules & MVS on two seperate machines. One acts as a DASD Controller, the second as the actual system. This creates a somewhat loose SYSPLEX, but it's kind of a stretch to call it even that. Both machines are directly wired to each other over a gigabit connection. The only traffic over this connection is the DASD packets. I am able to get a decent MIPS rate, almost 500 total. I am also running two quasi-LPAR's (they are not real LPAR's, but Hercules thinks they are) on this setup. 
 
 2. SYSPLEX Controller
    1. Ubuntu 16.04.3 LTS
@@ -49,6 +48,9 @@ I am currently running Hercules & MVS on two seperate machines. One acts as a DA
 ![Screenshot of Printer 2](https://raw.githubusercontent.com/Haynie-Research-and-Development/hrdplex-gui/master/screenshots/printer-2.png)
 
 ![Screenshot of Printer 3](https://raw.githubusercontent.com/Haynie-Research-and-Development/hrdplex-gui/master/screenshots/printer-3.png)
+
+
+![MIPS](https://raw.githubusercontent.com/Haynie-Research-and-Development/hrdplex-gui/master/screenshots/mips.png)
    
 ### Functionality Wishlist
 1. Built in master console
