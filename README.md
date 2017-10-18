@@ -22,6 +22,18 @@ $ sudo make install
    1. I find the MVS Tur(n)key system to be the easiest, especailly for novice users.
    2. Jay Moseley's documetation also very useful: http://www.jaymoseley.com/hercules
    
+### My Setup
+I am currently running Hercules & MVS on two seperate machines. One acts as a DASD Controller, the second as the actual system. This creates a somewhat loose SYSPLEX, but it's kind of a stretch to call it even that. 
+
+2. SYSPLEX Controller
+   1. 8 3GHZ CPU's
+   2. 32GB Memory
+   3. 1TB HD (500GB usable) configured RAID 1
+1. DASD Controller
+   1. 8 2GHZ CPU's
+   2. 16GB Memory
+   3. 8TB HD (4GB usable) configured RAID 1
+   
 ### Functionality Wishlist
 1. Built in master console
 2. Tape robot system
