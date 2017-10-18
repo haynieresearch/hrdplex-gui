@@ -19,8 +19,8 @@ $ sudo make install
 ### Prerequisites
 1. Get Hercules installed and running: https://hercules-390.github.io/html/hercinst.html
 2. Download & Install MVS 3.8J: http://www.bsp-gmbh.com/turnkey/
-   1.1 I find the MVS Tur(n)key system to be the easiest, especailly for novice users.
-   1.2 Jay Moseley's documetation also very useful: http://www.jaymoseley.com/hercules
+   1. I find the MVS Tur(n)key system to be the easiest, especailly for novice users.
+   2. Jay Moseley's documetation also very useful: http://www.jaymoseley.com/hercules
    
 ### Functionality Wishlist
 1. Built in master console
