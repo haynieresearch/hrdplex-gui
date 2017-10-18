@@ -23,16 +23,19 @@ $ sudo make install
    2. Jay Moseley's documetation also very useful: http://www.jaymoseley.com/hercules
    
 ### My Setup
-I am currently running Hercules & MVS on two seperate machines. One acts as a DASD Controller, the second as the actual system. This creates a somewhat loose SYSPLEX, but it's kind of a stretch to call it even that. 
+I am currently running Hercules & MVS on two seperate machines. One acts as a DASD Controller, the second as the actual system. This creates a somewhat loose SYSPLEX, but it's kind of a stretch to call it even that. Both machines are directly wired to each other over a gigabit connection. The only traffic over this connection is the DASD packets.
 
 2. SYSPLEX Controller
-   1. 8 3GHZ CPU's
-   2. 32GB Memory
-   3. 1TB HD (500GB usable) configured RAID 1
+   1. Ubuntu 16.04.3 LTS
+   2. 8 3GHZ CPU's
+   3. 32GB Memory
+   4. 1TB HD (500GB usable) configured RAID 1
+   
 1. DASD Controller
-   1. 8 2GHZ CPU's
-   2. 16GB Memory
-   3. 8TB HD (4GB usable) configured RAID 1
+   1. Ubuntu 16.04.3 LTS
+   2. 8 2GHZ CPU's
+   3. 16GB Memory
+   4. 8TB HD (4GB usable) configured RAID 1
    
 ![Screenshot of DASD Controller](https://raw.githubusercontent.com/Haynie-Research-and-Development/hrdplex-gui/master/screenshots/dasd-controller.png)
 
