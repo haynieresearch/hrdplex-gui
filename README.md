@@ -34,6 +34,18 @@ I am currently running Hercules & MVS on two seperate machines. One acts as a DA
    2. 16GB Memory
    3. 8TB HD (4GB usable) configured RAID 1
    
+![Screenshot of DASD Controller](https://raw.githubusercontent.com/Haynie-Research-and-Development/hrdplex-gui/master/screenshots/dasd-controller.png)
+
+![Screenshot of SYSPLEX Controller 1](https://raw.githubusercontent.com/Haynie-Research-and-Development/hrdplex-gui/master/screenshots/sysplex-controller-1.png)
+
+![Screenshot of SYSPLEX Controller 2](https://raw.githubusercontent.com/Haynie-Research-and-Development/hrdplex-gui/master/screenshots/sysplex-controller-2.png)
+
+![Screenshot of Printer 1](https://raw.githubusercontent.com/Haynie-Research-and-Development/hrdplex-gui/master/screenshots/printer-1.png)
+
+![Screenshot of Printer 2](https://raw.githubusercontent.com/Haynie-Research-and-Development/hrdplex-gui/master/screenshots/printer-2.png)
+
+![Screenshot of Printer 3](https://raw.githubusercontent.com/Haynie-Research-and-Development/hrdplex-gui/master/screenshots/printer-3.png)
+   
 ### Functionality Wishlist
 1. Built in master console
 2. Tape robot system
